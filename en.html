@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hai Lei · AI Product Manager Resume</title>
+<style>
+:root{
+  --navy:#0e2a47;
+  --navy-2:#163a5f;
+  --ink:#1f2a37;
+  --ink-2:#4b5a6a;
+  --muted:#7a8796;
+  --line:#e3e8ef;
+  --bg:#f4f6fa;
+  --card:#ffffff;
+  --accent:#1f6feb;
+  --accent-soft:#e8f0fe;
+  --teal:#0e9aa7;
+  --gold:#b8860b;
+  --radius:10px;
+  --shadow:0 1px 3px rgba(16,42,71,.06),0 8px 24px rgba(16,42,71,.06);
+  --font:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+ul{list-style:none}
+
+/* ---------- Top Nav ---------- */
+.topnav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topnav-inner{
+  max-width:1080px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;gap:8px;height:56px;
+}
+.brand{font-weight:700;color:var(--navy);letter-spacing:1px;margin-right:auto;font-size:15px}
+.brand span{color:var(--accent)}
+.topnav nav{display:flex;gap:2px;flex-wrap:wrap}
+.topnav nav a{
+  color:var(--ink-2);font-size:13.5px;padding:6px 12px;border-radius:6px;
+  white-space:nowrap;
+}
+.topnav nav a:hover{background:var(--accent-soft);color:var(--accent);text-decoration:none}
+.btn-print{
+  border:1px solid var(--accent);background:var(--accent);color:#fff;
+  font-family:inherit;font-size:13px;padding:6px 14px;border-radius:6px;cursor:pointer;
+  transition:background .2s;
+}
+.btn-print:hover{background:#1858c4}
+.btn-lang{
+  display:inline-block;border:1px solid var(--accent);background:#fff;color:var(--accent);
+  font-family:inherit;font-size:13px;padding:6px 14px;border-radius:6px;cursor:pointer;
+  transition:background .2s;text-decoration:none;line-height:1.4;
+}
+.btn-lang:hover{background:var(--accent-soft);text-decoration:none}
+.btn-print:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#1d4e7c 100%);
+  color:#fff;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+  border-radius:50%;background:radial-gradient(circle,rgba(31,111,235,.35),transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1080px;margin:0 auto;padding:56px 24px 48px;position:relative;z-index:1;
+}
+.hero h1{font-size:42px;font-weight:800;letter-spacing:4px;line-height:1.2}
+.hero .role{
+  display:inline-block;margin-top:14px;font-size:17px;letter-spacing:2px;
+  padding:5px 16px;border:1px solid rgba(255,255,255,.45);border-radius:30px;
+}
+.hero .tagline{margin-top:14px;color:rgba(255,255,255,.78);font-size:14.5px}
+.contact-grid{
+  margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.15);
+  border-radius:var(--radius);overflow:hidden;
+}
+.contact-item{background:rgba(14,42,71,.55);padding:13px 18px;display:flex;align-items:center;gap:10px;font-size:13.5px}
+.contact-item .ico{flex:none;width:18px;height:18px;color:#7db4ff}
+.contact-item b{color:rgba(255,255,255,.6);font-weight:400;margin-right:4px}
+.available{
+  margin-top:16px;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;
+  background:rgba(14,154,167,.25);border:1px solid rgba(94,234,212,.4);
+  padding:5px 14px;border-radius:30px;color:#b8f0e6;
+}
+.dot{width:8px;height:8px;border-radius:50%;background:#3ddc97;box-shadow:0 0 0 4px rgba(61,220,151,.2)}
+
+/* ---------- Main ---------- */
+main{max-width:1080px;margin:0 auto;padding:40px 24px 64px}
+section{scroll-margin-top:76px;margin-bottom:44px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+.sec-head h2{
+  font-size:23px;font-weight:800;color:var(--navy);letter-spacing:2px;
+  display:flex;align-items:center;gap:12px;
+}
+.sec-head h2::before{
+  content:"";display:inline-block;width:5px;height:22px;border-radius:3px;
+  background:linear-gradient(var(--accent),var(--teal));
+}
+.sec-head .en{color:var(--muted);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+
+/* ---------- Strengths ---------- */
+.strength-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.strength-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;box-shadow:var(--shadow);
+}
+.strength-card h3{font-size:15.5px;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:9px}
+.strength-card .num{
+  flex:none;width:26px;height:26px;border-radius:7px;background:var(--accent-soft);color:var(--accent);
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.strength-card p{font-size:14px;color:var(--ink-2)}
+.strength-card.full{grid-column:1 / -1}
+
+/* ---------- Education / Training ---------- */
+.edu-card,.train-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 26px;box-shadow:var(--shadow);
+}
+.edu-top,.train-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+.edu-date,.train-date{
+  font-size:13px;color:var(--accent);font-weight:600;background:var(--accent-soft);
+  padding:2px 12px;border-radius:20px;
+}
+.edu-top h3,.train-top h3{font-size:16.5px;color:var(--navy)}
+.edu-top .major,.train-top .org2{color:var(--ink-2);font-size:14.5px}
+.edu-body{margin-top:12px;font-size:14px;color:var(--ink-2)}
+.edu-body p{margin-top:4px}
+.train-list{margin-top:12px;font-size:14px;color:var(--ink-2)}
+.train-list li{padding-left:18px;position:relative;margin-top:4px}
+.train-list li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+
+/* ---------- Projects ---------- */
+.proj-list{display:flex;flex-direction:column;gap:16px}
+.proj-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 26px;box-shadow:var(--shadow);
+  border-left:4px solid var(--accent);
+}
+.proj-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;margin-bottom:10px}
+.proj-date{
+  font-size:12.5px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--navy),var(--navy-2));
+  padding:3px 12px;border-radius:6px;letter-spacing:.5px;white-space:nowrap;
+}
+.proj-head h3{font-size:16.5px;color:var(--navy)}
+.proj-role{
+  font-size:12.5px;color:var(--teal);font-weight:600;border:1px solid rgba(14,154,167,.35);
+  padding:2px 10px;border-radius:20px;background:#f0fbfc;
+}
+.proj-tech{font-size:13px;color:var(--muted);margin-bottom:8px}
+.proj-body li{
+  position:relative;padding-left:20px;font-size:14px;color:var(--ink-2);margin-top:6px;
+}
+.proj-body li::before{
+  content:"";position:absolute;left:3px;top:11px;width:7px;height:7px;border-radius:2px;
+  background:var(--accent-soft);border:1.5px solid var(--accent);
+}
+.proj-body li b{color:var(--ink);font-weight:600}
+
+/* ---------- Experience Timeline ---------- */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{
+  content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--accent),var(--teal));opacity:.35;
+}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-item:last-child{margin-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-27px;top:7px;width:14px;height:14px;border-radius:50%;
+  background:#fff;border:3px solid var(--accent);
+}
+.tl-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 24px;box-shadow:var(--shadow);
+}
+.tl-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px}
+.tl-date{font-size:13px;color:var(--accent);font-weight:700;white-space:nowrap}
+.tl-head h3{font-size:16px;color:var(--navy)}
+.tl-title{font-size:13.5px;color:var(--teal);font-weight:600}
+.tl-company{font-size:13px;color:var(--muted);margin:8px 0 4px}
+.tl-sub{font-size:14px;color:var(--ink-2)}
+.tl-sub .label{font-weight:700;color:var(--navy);display:block;margin:10px 0 2px}
+.tl-sub ul{margin-top:2px}
+.tl-sub li{position:relative;padding-left:18px;margin-top:5px;font-size:13.8px}
+.tl-sub li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.tl-sub li b{color:var(--ink);font-weight:600}
+
+/* ---------- Footer ---------- */
+footer{
+  background:var(--navy);color:rgba(255,255,255,.75);text-align:center;
+  padding:30px 24px;font-size:13.5px;
+}
+footer b{color:#fff;font-size:15px;letter-spacing:1px}
+footer .fline{margin-top:6px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .hero h1{font-size:32px}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .strength-grid{grid-template-columns:1fr}
+  .topnav nav{display:none}
+}
+@media (max-width:480px){
+  .hero-inner{padding:40px 18px 36px}
+  main{padding:30px 16px 48px}
+  .contact-grid{grid-template-columns:1fr}
+  .proj-card,.tl-card,.strength-card,.edu-card,.train-card{padding:18px}
+  .hero h1{font-size:28px;letter-spacing:2px}
+}
+
+/* ---------- Print ---------- */
+@media print{
+  @page{size:A4;margin:14mm 13mm}
+  body{background:#fff;font-size:11.5px;line-height:1.55}
+  .topnav,.btn-print,.available{display:none !important}
+  html{scroll-padding-top:0}
+  .hero{background:none;color:var(--ink)}
+  .hero::after{display:none}
+  .hero-inner{padding:0 0 8px;max-width:100%}
+  .hero h1{font-size:26px;color:var(--navy);letter-spacing:2px}
+  .hero .role{font-size:12.5px;color:var(--ink);border-color:var(--line);padding:2px 12px;margin-top:8px}
+  .hero .tagline{display:none}
+  .contact-grid{margin-top:14px;background:var(--line);border-color:var(--line)}
+  .contact-item{background:#fff;padding:5px 10px;font-size:10.5px;color:var(--ink)}
+  .contact-item .ico{color:var(--accent)}
+  .contact-item b{color:var(--muted)}
+  main{padding:0;max-width:100%}
+  section{margin-bottom:14px;break-inside:avoid-page}
+  .sec-head{margin-bottom:8px}
+  .sec-head h2{font-size:15px}
+  .sec-head h2::before{height:15px;width:4px}
+  .strength-grid{gap:8px}
+  .strength-card,.proj-card,.tl-card,.edu-card,.train-card{
+    box-shadow:none;border:1px solid var(--line);padding:10px 12px;break-inside:avoid;
+  }
+  .strength-card h3{font-size:12px;margin-bottom:2px}
+  .strength-card p,.proj-body li,.tl-sub li,.edu-body,.train-list{font-size:10.8px}
+  .strength-card .num{width:20px;height:20px;font-size:11px}
+  .proj-head{margin-bottom:4px}
+  .proj-head h3{font-size:12.5px}
+  .proj-body li,.tl-sub li{margin-top:2px;padding-left:15px}
+  .proj-date{font-size:10px;padding:1px 8px}
+  .timeline{padding-left:18px}
+  .timeline::before{left:4px}
+  .tl-item::before{left:-20px;width:10px;height:10px;border-width:2px;top:5px}
+  .tl-item{margin-bottom:10px}
+  .tl-head h3{font-size:12px}
+  .tl-company{margin:4px 0}
+  .tl-sub .label{margin:5px 0 1px}
+  footer{background:none;color:var(--muted);padding:10px 0;font-size:10px}
+  footer b{color:var(--navy)}
+}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="topnav-inner">
+    <div class="brand">Hai Lei <span>· HAI LEI</span></div>
+    <nav aria-label="Page navigation">
+      <a href="#advantage">Strengths</a>
+      <a href="#education">Education</a>
+      <a href="#training">Training</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+    </nav>
+    <a class="btn-lang" href="https://sealeos-git.github.io/index.html" target="_blank" rel="noopener noreferrer">中文</a>
+    <button class="btn-print" id="btnPrint" type="button">Print / Save PDF</button>
+  </div>
+</header>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Hai Lei</h1>
+    <span class="role">Target Role: AI Product Manager</span>
+    <p class="tagline">15 Years in Digital Transformation × Engineering ｜ Delivered 30+ Mid-to-Large Projects ｜ AI + Unmanned Product Line Lead</p>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span><b>Phone</b>18823066623</span>
+      </div>
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span><b>Email</b>hllhk12345@163.com</span>
+      </div>
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span><b>Location</b>Greater Bay Area / PRD</span>
+      </div>
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span><b>Status</b>Available within a month</span>
+      </div>
+      <div class="contact-item"><span><b>Gender</b>Male</span></div>
+      <div class="contact-item"><span><b>Age</b>38</span></div>
+      <div class="contact-item"><span><b>Degree</b>Bachelor's</span></div>
+      <div class="contact-item"><span><b>Experience</b>14+ years</span></div>
+    </div>
+
+    <div class="available"><span class="dot"></span>Available within a month ｜ Seeking opportunities in the Greater Bay Area</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Strengths -->
+  <section id="advantage">
+    <div class="sec-head"><h2>Strengths</h2><span class="en">Personal Advantages</span></div>
+    <div class="strength-grid">
+      <div class="strength-card">
+        <h3><span class="num">01</span>Cross-Domain Experience &amp; Project Results</h3>
+        <p>15 years of combined experience in digital transformation (robotics industry) and engineering, serving as Product Manager, Solution Engineer, and Business Manager. Led the delivery of 30+ mid-to-large projects and received honors including the National Gold Craftsman Award. Consistently promoted with salary increases over the past 6 years.</p>
+      </div>
+      <div class="strength-card">
+        <h3><span class="num">02</span>Core Product &amp; Solution Capabilities</h3>
+        <p>Deep command of the underlying logic and frameworks of product R&amp;D; skilled in requirements analysis and product definition using SWOT, 5W2H, user journey mapping, and UML state analysis; capable of full-link delivery from product design to handover. Authored project initiation and delivery documents as a product manager and delivered nearly 100 solution presentations. With business knowledge in real estate and environmental protection, I excel at identifying digitalization opportunities in traditional industries.</p>
+      </div>
+      <div class="strength-card">
+        <h3><span class="num">03</span>Artificial Intelligence Application</h3>
+        <p>Proficient with domestic and international AI tools including Codex CLI, Trae CN, VSCode, and Claude Code; combined with product skills, capable of full-stack development and rapid delivery for small and mid-sized platforms. Hands-on RAG retrieval and local knowledge-base building; company-level AI product system experience; able to rapidly build agents based on Dify, vLLM, and LangChain/LangGraph; skilled at using LLMs and AI agents for team management and business enablement.</p>
+      </div>
+      <div class="strength-card">
+        <h3><span class="num">04</span>Team Management &amp; Industrialization</h3>
+        <p>Previously led a 20-person team and coordinated cross-department collaboration; skilled in Scrum agile development and team management with Feishu Bitable. Deep understanding of research commercialization and familiar with the processes and methods of industrialization.</p>
+      </div>
+      <div class="strength-card full">
+        <h3><span class="num">05</span>Passion for Technology Innovation</h3>
+        <p>Passionate about sci-tech innovation; continuously tracking developments in unmanned equipment and AI applications; repeatedly drove the cross-sector adoption of robotics, unmanned systems, vision recognition algorithms, and AI; experienced in software copyright and patent applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="sec-head"><h2>Education</h2><span class="en">Academic Background</span></div>
+    <div class="edu-card">
+      <div class="edu-top">
+        <span class="edu-date">2007.09 – 2011.06</span>
+        <h3>Hubei University of Technology</h3>
+        <span class="major">Civil Engineering · Bachelor's Degree</span>
+      </div>
+      <div class="edu-body">
+        <p><b style="color:var(--navy)">Campus Experience:</b> Outstanding Graduate, Third-class Scholarship, 4 years as Youth League Branch Secretary, 1 year as a student Party liaison.</p>
+        <p><b style="color:var(--navy)">Skills &amp; Certificates:</b> BIM technology application, AI Trainer Level 3, cross-domain technology integration and project management, Intermediate Engineer title, CET-6, and light drone safety operation certification.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training -->
+  <section id="training">
+    <div class="sec-head"><h2>Training</h2><span class="en">Professional Training</span></div>
+    <div class="train-card">
+      <div class="train-top">
+        <span class="train-date">2024.04 – Present</span>
+        <h3>Dachen Education MBA Business School</h3>
+        <span class="org2">Low-Altitude Economy Camp &amp; AI Training Camp</span>
+      </div>
+      <ul class="train-list">
+        <li><b style="color:var(--ink)">Core Courses:</b> AI training camp, AI smart hardware camp, low-altitude economy camp</li>
+        <li><b style="color:var(--ink)">Certificates:</b> Civil drone operation certification, AI Trainer Level 3</li>
+        <li><b style="color:var(--ink)">Research Reports:</b> Low-altitude drone inspection of Wuhan Liangzi Lake Reservoir, DJI Dock smart city promotion, analysis of Guangzhou's low-altitude industry development</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="sec-head"><h2>Projects</h2><span class="en">Project Experience</span></div>
+    <div class="proj-list">
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2026.08 – Present</span>
+          <h3>Space-Air-Ground Integrated Water Ecology Monitoring Platform</h3>
+          <span class="proj-role">Product Manager &amp; Full-Stack Developer</span>
+        </div>
+        <ul class="proj-body">
+          <li>A multi-source data fusion and intelligent analysis platform for watershed water ecology monitoring, integrating satellite remote sensing, drones, and IoT sensor data to enable dynamic monitoring and early warning of the spatiotemporal distribution of water quality parameters.</li>
+          <li><b>Product Planning:</b> Led 0-to-1 product design and technology selection; defined the multi-source data fusion architecture (satellite → drone → ground equipment); planned core modules including water quality inversion, GIS monitoring, and intelligent alerts.</li>
+          <li><b>AI Implementation:</b> Designed a machine-learning-based water quality remote sensing inversion solution; integrated Copernicus Sentinel-2 satellite imagery; built a Random Forest inversion engine to visualize the spatial distribution of chlorophyll-a, suspended solids, turbidity, and other parameters.</li>
+          <li><b>Full-Stack Development:</b> React 18 + TypeScript + Ant Design / FastAPI + Python / GeoServer + Tianditu; independently completed the full workflow of frontend dashboards, backend services, GIS integration, WeCom authentication, and production deployment.</li>
+          <li><b>Live &amp; Running:</b> v6 fully deployed on Alibaba Cloud, supporting routine water ecology monitoring across 2 watersheds.</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2026.03 – 2026.08</span>
+          <h3>AI Feasibility Study Report Generation System</h3>
+          <span class="proj-role">Product Manager &amp; Full-Stack Developer</span>
+        </div>
+        <p class="proj-tech">Tech Stack: LLM API + Vector Database (Milvus) + React/Vue + Python</p>
+        <ul class="proj-body">
+          <li>Led product planning; designed the RBAC permission system and structured the AI prompt architecture with layered prompts (system-level → context-level → task-level).</li>
+          <li>Designed an 11-chapter standard outline template library aligned with the 2023 government project standards.</li>
+          <li>Designed the vector database knowledge-base architecture: Embedding + keyword matching + Rerank for precise text recall.</li>
+          <li>Delivered a production-ready web product.</li>
+          <li>Immediately improved feasibility report writing efficiency by 50% after internal launch; multi-agent collaboration features remain under iteration, with independent skill monetization as the future goal.</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2025.12 – Present</span>
+          <h3>Water Ecology Monitoring / Restoration USV</h3>
+          <span class="proj-role">Product Owner</span>
+        </div>
+        <ul class="proj-body">
+          <li>Led requirements research and user interviews; defined the product architecture and R&amp;D roadmap with clear milestones and resource planning.</li>
+          <li>Liaised with technical and supply chain teams to complete product development design; advanced technical feasibility validation and supply chain integration in parallel, ensuring both technical advancement and cost control.</li>
+          <li>Defined product positioning, functional architecture, and boundaries; cross-department collaboration with engineering and supply chain teams to bridge the path from solution to mass production, driving rapid product delivery and supporting the commercialization loop.</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2025.10 – 2026.01</span>
+          <h3>South China Rural Rain/Sewage Collection Device R&amp;D</h3>
+          <span class="proj-role">Hardware Product Manager</span>
+        </div>
+        <ul class="proj-body">
+          <li>Participated in the industrial design of the rain/sewage flushing device.</li>
+          <li>Authored technical disclosure documents and filed national invention patents.</li>
+          <li>Managed industrialization progress; identified process issues and risks and coordinated cross-department solutions.</li>
+          <li>Aligned supply chain and marketing teams to define product positioning and iteration direction, optimizing production processes and lowering deployment costs.</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2024.04 – 2024.06</span>
+          <h3>Wuhan Liangzi Lake Low-Altitude Drone Inspection Project</h3>
+          <span class="proj-role">Solution Design &amp; Execution Lead</span>
+        </div>
+        <ul class="proj-body">
+          <li>Designed a comprehensive low-altitude drone inspection solution integrating multi-sensor equipment for real-time water quality and ecological data collection.</li>
+          <li>Optimized airspace management procedures (0–120 m altitude airspace applications), improving inspection efficiency by 30%.</li>
+          <li>Deployed 12 drone docks and established emergency response mechanisms for rapid incident response.</li>
+          <li>Ensured airspace regulatory compliance; completed flight permit approvals and authored data analysis reports.</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2024.07 – 2024.12</span>
+          <h3>DJI Dock Smart City Promotion Project</h3>
+          <span class="proj-role">Customer Needs Analysis &amp; Technical Deployment</span>
+        </div>
+        <ul class="proj-body">
+          <li>Researched smart city low-altitude application needs; analyzed competitor strategies and developed customized deployment plans.</li>
+          <li>Completed on-site equipment commissioning and personnel training for 20+ clients; optimized drone flight paths and data collection workflows.</li>
+          <li>Leveraged data analysis tools to improve operational efficiency and reduce operating costs by 15%.</li>
+          <li>Drove project rollout in 5 cities, enhancing city management and fire rescue efficiency.</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2024.06 – 2024.07</span>
+          <h3>AI Q&amp;A Agent Building</h3>
+          <span class="proj-role">Product Manager &amp; Project Manager</span>
+        </div>
+        <ul class="proj-body">
+          <li>Led Q&amp;A agent architecture design, implementation, and testing, completing end-to-end closed-loop development.</li>
+          <li>Evaluated multiple AI large models and optimized algorithm logic, improving model response speed by 40%.</li>
+          <li>Integrated chain-of-thought and plugin capabilities to build an adaptive advanced agent; optimized prompts to improve question-handling efficiency.</li>
+          <li>Mastered rapid agent building and restructuring, producing reusable technical solutions.</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2020.11 – 2023.04</span>
+          <h3>Bozhilin Smart Construction Site</h3>
+          <span class="proj-role">Product Manager</span>
+        </div>
+        <ul class="proj-body">
+          <li>Scope included the material requisition module, warehousing module (inventory transfer, stocktaking, inbound/outbound, smart weighbridge), and transportation module (integrated with AGV logistics robots), covering both Web and App. Oversaw the overall product planning of the material management system; led SaaS-based WMS development and drove its integration with the AGV robot handling system and project rollout.</li>
+          <li>Coordinated cross-department resources to deploy the system across 11 Country Garden projects, with 25 daily active users.</li>
+          <li>Optimized material flow processes, significantly reducing manual data entry scenarios, achieving a 25% efficiency improvement and lowering labor costs.</li>
+          <li><b>Data Governance:</b> Completed cleansing and unification of material master data.</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2020.04 – 2020.11</span>
+          <h3>Bozhilin Planning &amp; Scheduling System</h3>
+          <span class="proj-role">Solution Engineer</span>
+        </div>
+        <ul class="proj-body">
+          <li>Ported the manufacturing APS system to the construction industry; completed construction process decomposition and business logic mapping.</li>
+          <li>Produced PRDs and requirements analysis using tools and frameworks such as SWOT, 5W2H, user journey maps, and flowcharts; drove feasibility validation of the work order system.</li>
+          <li>Rolled out to 11 construction sites, covering construction schedule management scenarios.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="sec-head"><h2>Experience</h2><span class="en">Work History</span></div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2025.09 – Present</span>
+            <h3>Guangzhou Resources Environmental Protection Technology Co., Ltd.</h3>
+          </div>
+          <div class="tl-title">AI Product Manager (Senior Product Manager)</div>
+          <p class="tl-company">Founded in 1999, the company focuses on integrated water environment remediation, with four core business systems — planning/consulting/design, construction, equipment manufacturing, and smart O&amp;M. Recognized as a 2025 national-level "Little Giant" (specialized and sophisticated SME).</p>
+          <div class="tl-sub">
+            <span class="label">Key Responsibilities</span>
+            <ul>
+              <li><b>Product Lifecycle Management:</b> Led full lifecycle management of the AI + unmanned product line.</li>
+              <li><b>Product Design:</b> Empowered core business through satellites, USVs, drones, AI agents, and digital platforms.</li>
+              <li><b>Technology:</b> Explored cutting-edge AI harness capabilities and built an enterprise-level AI business platform leveraging the environmental engineering background; identified market breakthroughs and enhanced the company's technology strength.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2023.08 – 2025.04</span>
+            <h3>Jiantai Construction Co., Ltd. (Huafa Group Subsidiary)</h3>
+          </div>
+          <div class="tl-title">Solution Engineer</div>
+          <p class="tl-company">Founded in 2018, a leading state-owned construction enterprise; won 47 projects in 2023 totaling RMB 12.123 billion, covering infrastructure, photovoltaics, and other fields (including RMB 610 million in Huafa Group construction and RMB 1.35 billion in PV projects).</p>
+          <div class="tl-sub">
+            <span class="label">Key Responsibilities</span>
+            <ul>
+              <li>Reviewed regional project planning documents, technical solutions, and business processes.</li>
+              <li>Liaised with the ERP R&amp;D team to complete requirements research and prototyping for the material management system.</li>
+              <li><b>Technology:</b> Studied domestic and international technical documents; explored reusable technical points; authored construction method documents and filed national invention patents.</li>
+              <li><b>Technology Innovation:</b> Explored AI + engineering application scenarios.</li>
+            </ul>
+            <span class="label">Achievements</span>
+            <ul>
+              <li><b>Key Results:</b> Completed technical appraisals for 2 construction processes, 1 science &amp; technology award application, 1 construction method, and 1 digital transformation solution design.</li>
+              <li><b>Innovation &amp; Improvement:</b> Improved organizational communication (function-based groups) and checklist management; used ChatGPT and Kimi AI to rapidly extract core arguments and optimize solutions, improving plan preparation and review efficiency by 200%; built a department business Q&amp;A bot using AI agent technology; explored digital transformation technologies and solutions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2020.04 – 2023.04</span>
+            <h3>Bozhilin Digital Technology (Construction Robotics Leader)</h3>
+          </div>
+          <div class="tl-title">Product Manager &amp; Solution Engineer</div>
+          <p class="tl-company">A wholly-owned subsidiary of a Fortune Global 500 company, founded in 2018 and focused on construction robots, BIM digitalization, and new industrialization. Built full-cycle smart construction solutions; developed 50+ construction robots with 32 commercialized; delivered 1,600+ units across 600+ projects in 30 provinces, covering over 10 million m² of construction area.</p>
+          <div class="tl-sub">
+            <span class="label">Key Responsibilities</span>
+            <ul>
+              <li><b>Market &amp; Policy Research:</b> Interpreted policies in BIM, digital transformation, and construction robotics; researched domestic and international market dynamics and trends; produced analysis reports.</li>
+              <li><b>Regional Business &amp; Product Design:</b> Focused on South China to conduct requirements research, collection, analysis, and review; built product design architectures; finalized design plans, PRDs, and marketing copy; designed material management platform prototypes; coordinated cross-department work to ensure delivery timelines and quality.</li>
+              <li><b>Product Optimization &amp; User Maintenance:</b> Collected user feedback and suggestions; maintained strong user relationships; drove product iteration and upgrades.</li>
+              <li><b>R&amp;D Support &amp; Project Rollout:</b> Participated in R&amp;D solution reviews and provided consulting advice from a market-needs perspective to ensure smooth project delivery.</li>
+              <li><b>Regional Training &amp; Promotion:</b> Responsible for product demos and training across 10 construction projects in Foshan.</li>
+            </ul>
+            <span class="label">Achievements</span>
+            <ul>
+              <li><b>Team Collaboration:</b> Took on project management, leading 4–5 members; set team goals, controlled project progress, liaised with market delivery, and coordinated project issues.</li>
+              <li>Work was well recognized; completed a job-level promotion in the third year.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2017.06 – 2020.03</span>
+            <h3>Shengzun Construction (Group Revenue ~RMB 10 Billion)</h3>
+          </div>
+          <div class="tl-title">Civil Engineering Supervisor &amp; BIM Chief Engineer</div>
+          <p class="tl-company">Nanjing Shengzun Construction Engineering Co., Ltd. under China Aoyang, founded in 2018 with Grade-1 general construction contracting qualification, focused on residential, municipal, and decoration sectors.</p>
+          <div class="tl-sub">
+            <span class="label">Key Responsibilities &amp; Achievements</span>
+            <ul>
+              <li><b>Technical Management:</b> Reviewed construction technical plans; produced standardized construction process atlases; handled routine technical/quality inspections and detail node acceptance.</li>
+              <li><b>Skills Training:</b> Trained new employees in BIM modeling, construction plan preparation, and MS Project.</li>
+              <li><b>Bidding:</b> Participated in technical bids and completed proposals for 25+ projects.</li>
+              <li><b>Technology Innovation:</b> Tracked industry trends and regularly reported on construction technology status; led BIM application and promotion.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2011.09 – 2017.06</span>
+            <h3>Jinhuihua Group (First Private Special-Grade Contractor in Guangdong)</h3>
+          </div>
+          <div class="tl-title">Technician</div>
+          <p class="tl-company">Founded in 1999 with 28 qualifications including Special-Grade general construction contracting and Grade-A design (including civil defense). As of 2024, operations covered 24 provinces and municipalities; landmark projects include Jiangmen Central Hospital (120,000 m²) and Zhongshan Memorial High School (80,000 m²); received 12 national quality awards and 107 provincial/ministerial awards.</p>
+          <div class="tl-sub">
+            <span class="label">Key Responsibilities &amp; Achievements</span>
+            <ul>
+              <li>Authored technical solutions and documentation; proficient with office software; familiar with construction acceptance codes and material testing procedures.</li>
+              <li>Capable of reading and revising blueprints; able to optimize construction plans as required.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <b>Hai Lei · AI Product Manager</b>
+  <div class="fline">Phone: 18823066623 ｜ Email: hllhk12345@163.com ｜ Location: Greater Bay Area</div>
+</footer>
+
+<script>
+(function(){
+  try{
+    var btn=document.getElementById('btnPrint');
+    if(btn){btn.addEventListener('click',function(){window.print();});}
+
+    var links=document.querySelectorAll('.topnav nav a[href^="#"]');
+    links.forEach(function(a){
+      a.addEventListener('click',function(e){
+        var id=a.getAttribute('href').slice(1);
+        var target=document.getElementById(id);
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+  }catch(err){
+    /* Static content remains fully readable if scripts fail */
+  }
+})();
+</script>
+</body>
+</html>

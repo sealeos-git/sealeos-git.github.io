@@ -61,6 +61,12 @@ ul{list-style:none}
   transition:background .2s;
 }
 .btn-print:hover{background:#1858c4}
+.btn-lang{
+  display:inline-block;border:1px solid var(--accent);background:#fff;color:var(--accent);
+  font-family:inherit;font-size:13px;padding:6px 14px;border-radius:6px;cursor:pointer;
+  transition:background .2s;text-decoration:none;line-height:1.4;
+}
+.btn-lang:hover{background:var(--accent-soft);text-decoration:none}
 .btn-print:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* ---------- 头部 ---------- */
@@ -280,6 +286,7 @@ footer .fline{margin-top:6px}
       <a href="#projects">项目经历</a>
       <a href="#experience">工作经历</a>
     </nav>
+    <a class="btn-lang" href="https://sealeos-git.github.io/en.html" target="_blank" rel="noopener noreferrer">English</a>
     <button class="btn-print" id="btnPrint" type="button">打印 / 保存PDF</button>
   </div>
 </header>
