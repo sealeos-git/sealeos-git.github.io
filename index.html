@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海磊 · AI产品经理简历</title>
+<style>
+:root{
+  --navy:#0e2a47;
+  --navy-2:#163a5f;
+  --ink:#1f2a37;
+  --ink-2:#4b5a6a;
+  --muted:#7a8796;
+  --line:#e3e8ef;
+  --bg:#f4f6fa;
+  --card:#ffffff;
+  --accent:#1f6feb;
+  --accent-soft:#e8f0fe;
+  --teal:#0e9aa7;
+  --gold:#b8860b;
+  --radius:10px;
+  --shadow:0 1px 3px rgba(16,42,71,.06),0 8px 24px rgba(16,42,71,.06);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+ul{list-style:none}
+
+/* ---------- 顶部导航 ---------- */
+.topnav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topnav-inner{
+  max-width:1080px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;gap:8px;height:56px;
+}
+.brand{font-weight:700;color:var(--navy);letter-spacing:1px;margin-right:auto;font-size:15px}
+.brand span{color:var(--accent)}
+.topnav nav{display:flex;gap:2px;flex-wrap:wrap}
+.topnav nav a{
+  color:var(--ink-2);font-size:13.5px;padding:6px 12px;border-radius:6px;
+  white-space:nowrap;
+}
+.topnav nav a:hover{background:var(--accent-soft);color:var(--accent);text-decoration:none}
+.btn-print{
+  border:1px solid var(--accent);background:var(--accent);color:#fff;
+  font-family:inherit;font-size:13px;padding:6px 14px;border-radius:6px;cursor:pointer;
+  transition:background .2s;
+}
+.btn-print:hover{background:#1858c4}
+.btn-print:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- 头部 ---------- */
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#1d4e7c 100%);
+  color:#fff;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+  border-radius:50%;background:radial-gradient(circle,rgba(31,111,235,.35),transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1080px;margin:0 auto;padding:56px 24px 48px;position:relative;z-index:1;
+}
+.hero h1{font-size:42px;font-weight:800;letter-spacing:4px;line-height:1.2}
+.hero .role{
+  display:inline-block;margin-top:14px;font-size:17px;letter-spacing:2px;
+  padding:5px 16px;border:1px solid rgba(255,255,255,.45);border-radius:30px;
+}
+.hero .tagline{margin-top:14px;color:rgba(255,255,255,.78);font-size:14.5px}
+.contact-grid{
+  margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.15);
+  border-radius:var(--radius);overflow:hidden;
+}
+.contact-item{background:rgba(14,42,71,.55);padding:13px 18px;display:flex;align-items:center;gap:10px;font-size:13.5px}
+.contact-item .ico{flex:none;width:18px;height:18px;color:#7db4ff}
+.contact-item b{color:rgba(255,255,255,.6);font-weight:400;margin-right:4px}
+.contact-item a{color:#fff}
+.available{
+  margin-top:16px;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;
+  background:rgba(14,154,167,.25);border:1px solid rgba(94,234,212,.4);
+  padding:5px 14px;border-radius:30px;color:#b8f0e6;
+}
+.dot{width:8px;height:8px;border-radius:50%;background:#3ddc97;box-shadow:0 0 0 4px rgba(61,220,151,.2)}
+
+/* ---------- 主体 ---------- */
+main{max-width:1080px;margin:0 auto;padding:40px 24px 64px}
+section{scroll-margin-top:76px;margin-bottom:44px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+.sec-head h2{
+  font-size:23px;font-weight:800;color:var(--navy);letter-spacing:2px;
+  display:flex;align-items:center;gap:12px;
+}
+.sec-head h2::before{
+  content:"";display:inline-block;width:5px;height:22px;border-radius:3px;
+  background:linear-gradient(var(--accent),var(--teal));
+}
+.sec-head .en{color:var(--muted);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+
+/* ---------- 个人优势 ---------- */
+.strength-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.strength-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;box-shadow:var(--shadow);
+}
+.strength-card h3{font-size:15.5px;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:9px}
+.strength-card .num{
+  flex:none;width:26px;height:26px;border-radius:7px;background:var(--accent-soft);color:var(--accent);
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.strength-card p{font-size:14px;color:var(--ink-2)}
+.strength-card.full{grid-column:1 / -1}
+
+/* ---------- 教育 / 培训 ---------- */
+.edu-card,.train-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 26px;box-shadow:var(--shadow);
+}
+.edu-top,.train-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+.edu-date,.train-date{
+  font-size:13px;color:var(--accent);font-weight:600;background:var(--accent-soft);
+  padding:2px 12px;border-radius:20px;
+}
+.edu-top h3,.train-top h3{font-size:16.5px;color:var(--navy)}
+.edu-top .major,.train-top .org2{color:var(--ink-2);font-size:14.5px}
+.edu-body{margin-top:12px;font-size:14px;color:var(--ink-2)}
+.edu-body p{margin-top:4px}
+.train-list{margin-top:12px;font-size:14px;color:var(--ink-2)}
+.train-list li{padding-left:18px;position:relative;margin-top:4px}
+.train-list li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+
+/* ---------- 项目经历 ---------- */
+.proj-list{display:flex;flex-direction:column;gap:16px}
+.proj-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 26px;box-shadow:var(--shadow);
+  border-left:4px solid var(--accent);
+}
+.proj-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;margin-bottom:10px}
+.proj-date{
+  font-size:12.5px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--navy),var(--navy-2));
+  padding:3px 12px;border-radius:6px;letter-spacing:.5px;white-space:nowrap;
+}
+.proj-head h3{font-size:16.5px;color:var(--navy)}
+.proj-role{
+  font-size:12.5px;color:var(--teal);font-weight:600;border:1px solid rgba(14,154,167,.35);
+  padding:2px 10px;border-radius:20px;background:#f0fbfc;
+}
+.proj-tech{font-size:13px;color:var(--muted);margin-bottom:8px}
+.proj-body li{
+  position:relative;padding-left:20px;font-size:14px;color:var(--ink-2);margin-top:6px;
+}
+.proj-body li::before{
+  content:"";position:absolute;left:3px;top:11px;width:7px;height:7px;border-radius:2px;
+  background:var(--accent-soft);border:1.5px solid var(--accent);
+}
+.proj-body li b{color:var(--ink);font-weight:600}
+
+/* ---------- 工作经历 时间线 ---------- */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{
+  content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--accent),var(--teal));opacity:.35;
+}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-item:last-child{margin-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-27px;top:7px;width:14px;height:14px;border-radius:50%;
+  background:#fff;border:3px solid var(--accent);
+}
+.tl-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 24px;box-shadow:var(--shadow);
+}
+.tl-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px}
+.tl-date{font-size:13px;color:var(--accent);font-weight:700;white-space:nowrap}
+.tl-head h3{font-size:16px;color:var(--navy)}
+.tl-title{font-size:13.5px;color:var(--teal);font-weight:600}
+.tl-company{font-size:13px;color:var(--muted);margin:8px 0 4px}
+.tl-sub{font-size:14px;color:var(--ink-2)}
+.tl-sub .label{font-weight:700;color:var(--navy);display:block;margin:10px 0 2px}
+.tl-sub ul{margin-top:2px}
+.tl-sub li{position:relative;padding-left:18px;margin-top:5px;font-size:13.8px}
+.tl-sub li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.tl-sub li b{color:var(--ink);font-weight:600}
+
+/* ---------- 页脚 ---------- */
+footer{
+  background:var(--navy);color:rgba(255,255,255,.75);text-align:center;
+  padding:30px 24px;font-size:13.5px;
+}
+footer b{color:#fff;font-size:15px;letter-spacing:1px}
+footer a{color:#7db4ff}
+footer .fline{margin-top:6px}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:860px){
+  .hero h1{font-size:32px}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .strength-grid{grid-template-columns:1fr}
+  .topnav nav{display:none}
+}
+@media (max-width:480px){
+  .hero-inner{padding:40px 18px 36px}
+  main{padding:30px 16px 48px}
+  .contact-grid{grid-template-columns:1fr}
+  .proj-card,.tl-card,.strength-card,.edu-card,.train-card{padding:18px}
+  .hero h1{font-size:28px;letter-spacing:2px}
+}
+
+/* ---------- 打印 ---------- */
+@media print{
+  @page{size:A4;margin:14mm 13mm}
+  body{background:#fff;font-size:11.5px;line-height:1.55}
+  .topnav,.btn-print,.available{display:none !important}
+  html{scroll-padding-top:0}
+  .hero{background:none;color:var(--ink)}
+  .hero::after{display:none}
+  .hero-inner{padding:0 0 8px;max-width:100%}
+  .hero h1{font-size:26px;color:var(--navy);letter-spacing:2px}
+  .hero .role{font-size:12.5px;color:var(--ink);border-color:var(--line);padding:2px 12px;margin-top:8px}
+  .hero .tagline{display:none}
+  .contact-grid{margin-top:14px;background:var(--line);border-color:var(--line)}
+  .contact-item{background:#fff;padding:5px 10px;font-size:10.5px;color:var(--ink)}
+  .contact-item .ico{color:var(--accent)}
+  .contact-item b{color:var(--muted)}
+  .contact-item a{color:var(--ink)}
+  main{padding:0;max-width:100%}
+  section{margin-bottom:14px;break-inside:avoid-page}
+  .sec-head{margin-bottom:8px}
+  .sec-head h2{font-size:15px}
+  .sec-head h2::before{height:15px;width:4px}
+  .strength-grid{gap:8px}
+  .strength-card,.proj-card,.tl-card,.edu-card,.train-card{
+    box-shadow:none;border:1px solid var(--line);padding:10px 12px;break-inside:avoid;
+  }
+  .strength-card h3{font-size:12px;margin-bottom:2px}
+  .strength-card p,.proj-body li,.tl-sub li,.edu-body,.train-list{font-size:10.8px}
+  .strength-card .num{width:20px;height:20px;font-size:11px}
+  .proj-head{margin-bottom:4px}
+  .proj-head h3{font-size:12.5px}
+  .proj-body li,.tl-sub li{margin-top:2px;padding-left:15px}
+  .proj-date{font-size:10px;padding:1px 8px}
+  .timeline{padding-left:18px}
+  .timeline::before{left:4px}
+  .tl-item::before{left:-20px;width:10px;height:10px;border-width:2px;top:5px}
+  .tl-item{margin-bottom:10px}
+  .tl-head h3{font-size:12px}
+  .tl-company{margin:4px 0}
+  .tl-sub .label{margin:5px 0 1px}
+  footer{background:none;color:var(--muted);padding:10px 0;font-size:10px}
+  footer b{color:var(--navy)}
+}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="topnav-inner">
+    <div class="brand">海磊 <span>· HAI LEI</span></div>
+    <nav aria-label="页面导航">
+      <a href="#advantage">个人优势</a>
+      <a href="#education">教育经历</a>
+      <a href="#training">培训经历</a>
+      <a href="#projects">项目经历</a>
+      <a href="#experience">工作经历</a>
+    </nav>
+    <button class="btn-print" id="btnPrint" type="button">打印 / 保存PDF</button>
+  </div>
+</header>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>海 磊</h1>
+    <span class="role">意向岗位：AI 产品经理</span>
+    <p class="tagline">15年数字化转型 × 工程领域复合经验 ｜ 主导交付 30+ 大中型项目 ｜ AI + 无人化产品线负责人</p>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span><b>电话</b>18823066623</span>
+      </div>
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span><b>邮箱</b>hllhk12345@163.com</span>
+      </div>
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span><b>地点</b>大湾区 / 珠三角</span>
+      </div>
+      <div class="contact-item">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span><b>状态</b>月内到岗</span>
+      </div>
+      <div class="contact-item"><span><b>性别</b>男</span></div>
+      <div class="contact-item"><span><b>年龄</b>38岁</span></div>
+      <div class="contact-item"><span><b>学历</b>本科</span></div>
+      <div class="contact-item"><span><b>经验</b>14+ 年</span></div>
+    </div>
+
+    <div class="available"><span class="dot"></span>目前状态：月内可到岗，求职地点：大湾区</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 个人优势 -->
+  <section id="advantage">
+    <div class="sec-head"><h2>个人优势</h2><span class="en">Strengths</span></div>
+    <div class="strength-grid">
+      <div class="strength-card">
+        <h3><span class="num">01</span>跨领域复合经验与项目成果</h3>
+        <p>具备 15 年数字化转型（机器人行业）+ 工程领域复合经验，担任产品经理、解决方案工程师、业务经理等职位，主导并交付 30 余个大中型项目，获国家金匠奖等多项荣誉，个人业绩优秀，最近 6 年均实现升职加薪。</p>
+      </div>
+      <div class="strength-card">
+        <h3><span class="num">02</span>产品与解决方案核心能力</h3>
+        <p>精通产品研发的底层逻辑和框架，擅长使用 SWOT、5W2H、用户旅程图、UML 状态分析等进行需求分析和产品定义，可实现从产品设计方案到交付的全链路工作；以产品经理身份编写研发项目立项文件和交付文件，完成近百次方案讲解；具备房地产和环保行业业务知识背景，擅于从传统业务中发现数字化机会。</p>
+      </div>
+      <div class="strength-card">
+        <h3><span class="num">03</span>人工智能应用能力</h3>
+        <p>精通 Codex CLI、Trae CN、VSCode、Claude Code 等国内外 AI 工具，结合产品技能可进行中小型平台的全栈开发和需求快速落地；掌握 RAG 检索和知识库本地搭建能力；有公司级 AI 产品体系建设经验，可快速搭建基于 Dify、vLLM 和 LangChain/LangGraph 框架的智能体，善于使用 LLM 和 AI Agent 进行团队管理和业务驱动。</p>
+      </div>
+      <div class="strength-card">
+        <h3><span class="num">04</span>部门管理与产业化落地能力</h3>
+        <p>曾管理 20 人团队，统筹跨部门协作；擅长使用 Scrum 敏捷开发方法和飞书多维表格管理团队；对科研转化有深刻认识，熟悉产业化落地的相关流程和方法。</p>
+      </div>
+      <div class="strength-card full">
+        <h3><span class="num">05</span>热爱科技创新</h3>
+        <p>热爱科创，持续关注无人装备及 AI 应用领域发展，多次跨界推动机器人、无人装备、视觉识别算法、AI 等新技术落地，有软著和专利申报经验。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教育经历 -->
+  <section id="education">
+    <div class="sec-head"><h2>教育经历</h2><span class="en">Education</span></div>
+    <div class="edu-card">
+      <div class="edu-top">
+        <span class="edu-date">2007.09 – 2011.06</span>
+        <h3>湖北工业大学</h3>
+        <span class="major">土木工程 · 本科</span>
+      </div>
+      <div class="edu-body">
+        <p><b style="color:var(--navy)">学校经历：</b>优秀毕业生、三等奖学金、4 年团支部书记、1 年学生入党联系人经历等。</p>
+        <p><b style="color:var(--navy)">技能及证书：</b>BIM 技术应用、人工智能训练师 3 级、跨领域技术整合及项目管理能力、持有中级工程师职称、大学英语 6 级及轻型无人机安全操控认证等。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 培训经历 -->
+  <section id="training">
+    <div class="sec-head"><h2>培训经历</h2><span class="en">Training</span></div>
+    <div class="train-card">
+      <div class="train-top">
+        <span class="train-date">2024.04 – 至今</span>
+        <h3>大辰教育 MBA 商学院</h3>
+        <span class="org2">低空经济训练营 &amp; AI 训练营</span>
+      </div>
+      <ul class="train-list">
+        <li><b style="color:var(--ink)">主修课程：</b>AI 训练营、AI 智能硬件训练营、低空经济训练营</li>
+        <li><b style="color:var(--ink)">相关证书：</b>轻型民营无人机操控认证、人工智能训练师三级</li>
+        <li><b style="color:var(--ink)">研究报告：</b>武汉梁子湖水库低空无人机巡检、大疆机场数智城市推广、广州市低空产业发展分析</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 项目经历 -->
+  <section id="projects">
+    <div class="sec-head"><h2>项目经历</h2><span class="en">Projects</span></div>
+    <div class="proj-list">
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2026.08 – 至今</span>
+          <h3>空天地一体水生态监测平台</h3>
+          <span class="proj-role">产品经理兼全栈开发</span>
+        </div>
+        <ul class="proj-body">
+          <li>面向流域水生态监测的多源数据融合与智能分析平台，整合卫星遥感、无人机、物联网传感器数据，实现水质参数时空分布的动态监测与预警。</li>
+          <li><b>产品规划：</b>主导系统从 0 到 1 的产品设计与技术选型，定义多源数据融合架构（卫星 → 无人机 → 地面设备），规划水质反演、GIS 监测、智能告警等核心模块。</li>
+          <li><b>AI 能力落地：</b>设计基于机器学习的水质遥感反演方案，接入 Copernicus Sentinel-2 卫星影像，构建 RF 反演引擎，实现叶绿素 a/悬浮物/浊度等参数的空间分布可视化。</li>
+          <li><b>全栈开发：</b>React 18 + TypeScript + Ant Design / FastAPI + Python / GeoServer + 天地图，独立完成前端大屏、后端服务、GIS 集成、企微鉴权、生产部署全流程。</li>
+          <li><b>已上线运行：</b>v6 版本全量部署至阿里云，支撑 2 个流域的常态化水生态监测。</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2026.03 – 2026.08</span>
+          <h3>AI 可行性研究报告生成系统</h3>
+          <span class="proj-role">产品经理兼全栈开发</span>
+        </div>
+        <p class="proj-tech">技术栈：大语言模型（LLM API）+ 向量数据库（Milvus）+ React/Vue + Python</p>
+        <ul class="proj-body">
+          <li>负责产品规划，设计 RBAC 权限体系，梳理 AI 生成 Prompt 架构体系，设计分层 Prompt（系统级 → 上下文级 → 任务级）。</li>
+          <li>设计 11 章标准大纲模板库，适配 2023 版政府项目规范。</li>
+          <li>设计向量数据库知识库架构：使用 Embedding + 关键字匹配 + Rerank 实现文本精准召回。</li>
+          <li>直接输出可交付的 Web 产品。</li>
+          <li>产品内部上线后立即提高可研编写效率 50%，目前持续迭代多智能体协作功能，实现技能独立变现是未来目标。</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2025.12 – 至今</span>
+          <h3>水生态监测 / 修复无人船 USV</h3>
+          <span class="proj-role">产品负责人</span>
+        </div>
+        <ul class="proj-body">
+          <li>主导需求调研和用户访谈，梳理产品架构和研发路线图，明确里程碑节点和资源需求。</li>
+          <li>对接技术团队和供应链，完成产品开发方案设计，同步推进技术可行性验证与供应链资源整合，确保方案兼具技术先进性与成本可控性。</li>
+          <li>明确产品定位、功能架构和边界，跨部门协同技术、供应链团队打通从方案到量产的关键节点，推动产品快速落地并支撑商业化闭环。</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2025.10 – 2026.01</span>
+          <h3>华南农村雨污收集装置研发项目</h3>
+          <span class="proj-role">硬件产品经理</span>
+        </div>
+        <ul class="proj-body">
+          <li>参与雨污冲刷装置的工业设计。</li>
+          <li>编写技术交底文件，申请国家发明专利。</li>
+          <li>产业化进度管理，过程问题识别，发现风险跨部门协调解决方案。</li>
+          <li>联动供应链和市场部，确定产品定位和迭代方向，优化生产工艺，降低产品落地成本。</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2024.04 – 2024.06</span>
+          <h3>武汉梁子湖水库低空无人机巡检项目</h3>
+          <span class="proj-role">方案设计与执行负责人</span>
+        </div>
+        <ul class="proj-body">
+          <li>设计低空无人机综合巡检方案，集成多传感器设备实现水质与生态数据实时采集。</li>
+          <li>优化空域管理流程（0–120 米高度空域申请），推动巡检效率提升 30%。</li>
+          <li>部署 12 个无人机机场并建立应急响应机制，快速处理突发灾情事件。</li>
+          <li>确保空域法规合规性，完成飞行许可审批及数据分析报告编制。</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2024.07 – 2024.12</span>
+          <h3>大疆机场数智城市推广项目</h3>
+          <span class="proj-role">客户需求分析与技术部署成员</span>
+        </div>
+        <ul class="proj-body">
+          <li>调研智慧城市低空应用需求，分析竞品策略并制定个性化部署方案。</li>
+          <li>完成 20+ 客户现场设备调试与人员培训，优化无人机飞行路径及数据采集流程。</li>
+          <li>利用数据分析软件优化作业效率，降低 15% 运营成本。</li>
+          <li>推动项目在 5 个城市落地，提升城市管理及消防救援效率。</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2024.06 – 2024.07</span>
+          <h3>AI 问答智能体搭建</h3>
+          <span class="proj-role">产品经理兼项目经理</span>
+        </div>
+        <ul class="proj-body">
+          <li>主导问答智能体架构设计、功能实现及测试，完成全流程闭环开发。</li>
+          <li>评估多款 AI 大模型性能，优化算法逻辑，提升模型响应速度 40%。</li>
+          <li>集成思维链与插件功能，构建自适应高级智能体，优化 Prompt 提示词以提高问题处理效率。</li>
+          <li>掌握智能体快速搭建与结构调整能力，输出可复用的技术方案。</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2020.11 – 2023.04</span>
+          <h3>博智林智慧工地</h3>
+          <span class="proj-role">产品经理</span>
+        </div>
+        <ul class="proj-body">
+          <li>项目包括材料请购模块、仓储模块（含库存调拨、盘点、出库入库、智能地磅）、运输模块（对接 AGV 物流机器人），覆盖 Web 端和 App 端；统筹材料管理系统的整体产品规划，主导 SaaS 化材料管理系统开发，推动 WMS 系统与 AGV 机器人搬运系统对接及项目落地。</li>
+          <li>协调跨部门资源，推动系统模块在碧桂园 11 个项目落地，日均活跃用户达 25 人。</li>
+          <li>优化材料流转流程，大幅减少数据录入场景，实现管理效率提升 25%，降低人工成本。</li>
+          <li><b>数据治理：</b>完成材料主数据清洗和统一。</li>
+        </ul>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-head">
+          <span class="proj-date">2020.04 – 2020.11</span>
+          <h3>博智林计划排程系统</h3>
+          <span class="proj-role">解决方案工程师</span>
+        </div>
+        <ul class="proj-body">
+          <li>将制造业 APS 系统移植至建筑行业，完成施工工艺拆解与业务逻辑梳理。</li>
+          <li>使用 SWOT、5W2H、用户旅程图、流程图等工具输出 PRD 文档并完成用户需求分析，推动工单系统可行性验证。</li>
+          <li>项目推广至 11 个施工现场，覆盖施工进度管理场景。</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section id="experience">
+    <div class="sec-head"><h2>工作经历</h2><span class="en">Experience</span></div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2025.09 – 至今</span>
+            <h3>广州资源环保科技股份有限公司</h3>
+          </div>
+          <div class="tl-title">AI 产品经理（高级产品经理）</div>
+          <p class="tl-company">公司成立于 1999 年，专注水环境综合整治，打造规划咨询设计、建设施工、装备制造、智慧运维四大核心业务体系；2025 年国家级专精特新"小巨人"企业。</p>
+          <div class="tl-sub">
+            <span class="label">主要工作</span>
+            <ul>
+              <li><b>产品全生命周期管理：</b>负责主导 AI + 无人化产品线的全生命周期管理。</li>
+              <li><b>产品设计：</b>利用卫星 + 无人船 + 无人机 + AI 智能体 + 数字化平台赋能核心业务。</li>
+              <li><b>技术总结：</b>探索前沿 AI Harness 能力，结合环保工程背景，建立企业级 AI 业务平台体系，寻找市场突破点并提升公司科技实力。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2023.08 – 2025.04</span>
+            <h3>建泰建设有限公司（华发集团子公司）</h3>
+          </div>
+          <div class="tl-title">解决方案工程师</div>
+          <p class="tl-company">公司成立于 2018 年，国有龙头建筑企业；2023 年中标项目 47 个，总金额 121.23 亿元，涵盖基建、光伏等领域。</p>
+          <div class="tl-sub">
+            <span class="label">主要工作</span>
+            <ul>
+              <li>梳理区域项目策划文件、技术方案和业务流程。</li>
+              <li>对接 ERP 研发组，完成物资管理系统需求调研和产品原型设计。</li>
+              <li><b>技术总结：</b>涉猎国内外技术文件，编制工法文件并申请国家发明专利。</li>
+              <li><b>科技创新：</b>探索 AI + 工程的应用场景。</li>
+            </ul>
+            <span class="label">工作业绩</span>
+            <ul>
+              <li><b>关键成果：</b>完成 2 个施工工艺的科技鉴定、1 项科学技术奖申报、1 项工法编写、1 项数字化转型方案设计。</li>
+              <li><b>创新与改进：</b>改进组织沟通方式、推行清单式管理；利用 ChatGPT 和 Kimi 快速完成方案核心论点提取与优化，方案编制与审核效率提高 200%；利用 AI 智能体创建部门业务问答机器人。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2020.04 – 2023.04</span>
+            <h3>博智林数字科技（建筑机器人龙头企业）</h3>
+          </div>
+          <div class="tl-title">产品经理 &amp; 解决方案工程师</div>
+          <p class="tl-company">世界 500 强全资子公司，聚焦建筑机器人、BIM 数字化及新型工业化；累计研发建筑机器人超 50 款，32 款商业化，交付超 1600 台，服务 30 省 600+ 项目。</p>
+          <div class="tl-sub">
+            <span class="label">主要工作</span>
+            <ul>
+              <li><b>市场与政策研究：</b>开展 BIM、数字化转型、建筑机器人领域的政策解读与市场调研，形成分析成果。</li>
+              <li><b>区域业务与产品设计：</b>聚焦华南区域完成需求调研分析与评审，搭建产品设计架构，输出 PRD 文档与宣传文案，设计材料管理平台原型。</li>
+              <li><b>产品优化与用户维护：</b>收集用户反馈，维护用户关系，推动产品迭代升级。</li>
+              <li><b>研发支持与项目落地：</b>参与研发方案论证，从市场需求视角提供咨询建议。</li>
+              <li><b>区域项目培训推广：</b>负责佛山市 10 个施工项目的产品演示与培训。</li>
+            </ul>
+            <span class="label">工作业绩</span>
+            <ul>
+              <li>带领 4–5 名成员，制定团队目标、控制项目进度、对接市场交付、协调项目问题。</li>
+              <li>工作获得认可，第三年完成职级提升。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2017.06 – 2020.03</span>
+            <h3>盛尊建筑（集团营收近 100 亿元）</h3>
+          </div>
+          <div class="tl-title">土建主管 &amp; BIM 技术总工</div>
+          <p class="tl-company">中国奥园旗下企业，持有建筑工程施工总承包壹级资质，聚焦房建、市政、装修等领域。</p>
+          <div class="tl-sub">
+            <span class="label">主要工作与业绩</span>
+            <ul>
+              <li><b>机关技术管理：</b>审核施工技术方案，绘制施工工艺标准化图册，负责日常技术质量检查和细部节点验收。</li>
+              <li><b>人员技能培训：</b>负责新员工 BIM 建模、施工方案编制、MS Project 使用培训。</li>
+              <li><b>招投标：</b>参与技术标投标，完成 25+ 项目标书制作。</li>
+              <li><b>科技创新管理：</b>定期汇报建筑科技现状，负责 BIM 技术的应用和推广。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-head">
+            <span class="tl-date">2011.09 – 2017.06</span>
+            <h3>金辉华集团（广东首家民营施工特级资质）</h3>
+          </div>
+          <div class="tl-title">技术员</div>
+          <p class="tl-company">持有建筑工程总承包特级、设计甲级（含人防）等 28 项资质，业务覆盖全国 24 省市，获国家级优质工程奖 12 项、省部级 107 项。</p>
+          <div class="tl-sub">
+            <span class="label">主要工作与业绩</span>
+            <ul>
+              <li>编写技术方案和技术资料，熟练掌握办公软件，熟悉建筑施工验收规范及材料送检流程。</li>
+              <li>具备识图改图能力，可按要求优化施工方案。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <b>海磊 · AI 产品经理</b>
+  <div class="fline">电话：18823066623 ｜ 邮箱：hllhk12345@163.com ｜ 求职地点：大湾区</div>
+</footer>
+
+<script>
+(function(){
+  try{
+    var btn=document.getElementById('btnPrint');
+    if(btn){btn.addEventListener('click',function(){window.print();});}
+
+    // 页内导航平滑滚动（原生降级：无 JS 时浏览器直接跳转锚点）
+    var links=document.querySelectorAll('.topnav nav a[href^="#"]');
+    links.forEach(function(a){
+      a.addEventListener('click',function(e){
+        var id=a.getAttribute('href').slice(1);
+        var target=document.getElementById(id);
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+  }catch(err){
+    /* 脚本异常时静态内容保持完整可读 */
+  }
+})();
+</script>
+</body>
+</html>
