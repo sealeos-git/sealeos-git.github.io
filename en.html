@@ -246,46 +246,61 @@ footer .fline{margin-top:6px}
   .available{font-size:12.5px;padding:5px 12px}
   .proj-body li,.edu-body p,.train-list li,.strength-card p,.tl-card p,footer .fline{overflow-wrap:break-word}
 }
+/* ---------- 电话显示/隐藏 ---------- */
+.phone-full{display:none}
+.phone-on .phone-mask{display:none}
+.phone-on .phone-full{display:inline}
+.phone-toggle{margin-left:8px;flex:none;border:1px solid rgba(125,180,255,.65);background:rgba(125,180,255,.14);color:#d6e8ff;font-family:inherit;font-size:11px;line-height:1;padding:3px 8px;border-radius:10px;cursor:pointer;transition:background .2s,color .2s}
+.phone-toggle:hover{background:rgba(125,180,255,.3);color:#fff}
+.phone-toggle:focus-visible{outline:2px solid #7db4ff;outline-offset:2px}
 @media print{
-  @page{size:A4;margin:14mm 13mm}
-  body{background:#fff;font-size:11.5px;line-height:1.55}
-  .topnav,.btn-print,.available{display:none !important}
+  @page{size:A4;margin:10mm 12mm}
+  html,body{background:#fff}
+  body{font-size:9.5pt;line-height:1.45;color:var(--ink)}
+  .topnav,.nav-icons,.btn-print,.btn-lang,.available,.phone-toggle{display:none !important}
+  .phone-mask{display:none !important}
+  .phone-full{display:inline !important}
   html{scroll-padding-top:0}
+  main{max-width:100%;padding:0;margin:0}
+  p,li{orphans:2;widows:2}
+  section{margin:0 0 6mm;break-inside:auto;page-break-inside:auto}
+  .sec-head{margin-bottom:3px;break-after:avoid;page-break-after:avoid}
+  .sec-head h2{font-size:12pt}
+  .sec-head h2::before{height:12pt;width:4px}
+  .sec-head .en{font-size:7.6pt}
   .hero{background:none;color:var(--ink)}
   .hero::after{display:none}
-  .hero-inner{padding:0 0 8px;max-width:100%}
-  .hero h1{font-size:26px;color:var(--navy);letter-spacing:2px}
-  .hero .role{font-size:12.5px;color:var(--ink);border-color:var(--line);padding:2px 12px;margin-top:8px}
+  .hero-inner{padding:0 0 3px;max-width:100%}
+  .hero h1{font-size:19pt;color:var(--navy);letter-spacing:2px}
+  .hero .role{font-size:9pt;color:var(--ink);border-color:var(--line);padding:2px 10px;margin-top:4px}
   .hero .tagline{display:none}
-  .contact-grid{margin-top:14px;background:var(--line);border-color:var(--line)}
-  .contact-item{background:#fff;padding:5px 10px;font-size:10.5px;color:var(--ink)}
-  .contact-item .ico{color:var(--accent)}
+  .contact-grid{margin-top:5px;background:var(--line);border-color:var(--line);grid-template-columns:repeat(3,1fr)}
+  .contact-item{background:#fff;padding:2px 8px;font-size:8.2pt;color:var(--ink)}
+  .contact-item .ico{color:var(--accent);width:10px;height:10px}
   .contact-item b{color:var(--muted)}
-  main{padding:0;max-width:100%}
-  section{margin-bottom:14px;break-inside:avoid-page}
-  .sec-head{margin-bottom:8px}
-  .sec-head h2{font-size:15px}
-  .sec-head h2::before{height:15px;width:4px}
-  .strength-grid{gap:8px}
-  .strength-card,.proj-card,.tl-card,.edu-card,.train-card{
-    box-shadow:none;border:1px solid var(--line);padding:10px 12px;break-inside:avoid;
-  }
-  .strength-card h3{font-size:12px;margin-bottom:2px}
-  .strength-card p,.proj-body li,.tl-sub li,.edu-body,.train-list{font-size:10.8px}
-  .strength-card .num{width:20px;height:20px;font-size:11px}
-  .proj-head{margin-bottom:4px}
-  .proj-head h3{font-size:12.5px}
-  .proj-body li,.tl-sub li{margin-top:2px;padding-left:15px}
-  .proj-date{font-size:10px;padding:1px 8px}
-  .timeline{padding-left:18px}
-  .timeline::before{left:4px}
-  .tl-item::before{left:-20px;width:10px;height:10px;border-width:2px;top:5px}
-  .tl-item{margin-bottom:10px}
-  .tl-head h3{font-size:12px}
-  .tl-company{margin:4px 0}
-  .tl-sub .label{margin:5px 0 1px}
-  footer{background:none;color:var(--muted);padding:10px 0;font-size:10px}
+  .contact-item a{color:var(--ink)}
+  .strength-grid{grid-template-columns:1fr 1fr;gap:4mm}
+  .strength-card,.proj-card,.tl-card,.edu-card,.train-card{box-shadow:none;border:1px solid var(--line);padding:3.2mm 3.6mm;break-inside:avoid;page-break-inside:avoid}
+  .strength-card h3{font-size:9.4pt;margin-bottom:1px}
+  .strength-card .num{width:16px;height:16px;font-size:8.4pt}
+  .strength-card p,.proj-body li,.tl-sub li,.edu-body,.train-list{font-size:9pt;line-height:1.42}
+  .proj-list{gap:4mm}
+  .proj-head{margin-bottom:2px}
+  .proj-head h3{font-size:9.6pt}
+  .proj-body li,.tl-sub li{margin-top:1px;padding-left:12px;break-inside:avoid}
+  .proj-date{font-size:7.6pt;padding:1px 5px}
+  .timeline{padding-left:15px}
+  .timeline::before{left:3px}
+  .tl-item{margin-bottom:4mm;break-inside:avoid;page-break-inside:avoid}
+  .tl-item::before{left:-17px;width:8px;height:8px;border-width:2px;top:4px}
+  .tl-head h3{font-size:9.4pt}
+  .tl-company{margin:2px 0}
+  .tl-sub .label{margin:3px 0 1px}
+  footer{background:none;color:var(--muted);padding:4px 0 0;font-size:7.6pt;border-top:1px solid var(--line);margin-top:4px}
   footer b{color:var(--navy)}
+  a{color:var(--ink);text-decoration:none}
+  .proj-body li,.tl-card p,.edu-body p,.strength-card p,footer .fline{overflow-wrap:anywhere;word-break:break-word}
+  img,svg{max-width:100%}
 }
 </style>
 </head>
@@ -319,7 +334,7 @@ footer .fline{margin-top:6px}
     <div class="contact-grid">
       <div class="contact-item">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span><b>Phone</b>188****6623</span>
+        <span><b>Phone</b><span class="phone-mask">188****6623</span><span class="phone-full">18823066623</span></span><button class="phone-toggle" type="button" aria-label="Show full phone number" aria-pressed="false">Show</button>
       </div>
       <div class="contact-item">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
@@ -671,7 +686,7 @@ footer .fline{margin-top:6px}
 
 <footer>
   <b>Hai Lei · AI Product Manager &amp; AI Application Development</b>
-  <div class="fline">Phone: 188****6623 ｜ Email: hllhk12345@163.com ｜ Location: Greater Bay Area</div>
+  <div class="fline">Phone: <span class="phone-mask">188****6623</span><span class="phone-full">18823066623</span> ｜ Email: hllhk12345@163.com ｜ Location: Greater Bay Area</div>
 </footer>
 
 <script>
@@ -695,6 +710,10 @@ footer .fline{margin-top:6px}
     /* Static content remains fully readable if scripts fail */
   }
 })();
+</script>
+
+<script>
+(function(){var b=document.querySelector(".phone-toggle");if(!b)return;var bd=document.body;function set(on){bd.classList.toggle("phone-on",on);b.setAttribute("aria-pressed",on?"true":"false");b.setAttribute("aria-label",(on?"Hide":"Show")+"full phone number");b.textContent=on?"Hide":"Show";}b.addEventListener("click",function(){set(!bd.classList.contains("phone-on"));});})();
 </script>
 </body>
 </html>
