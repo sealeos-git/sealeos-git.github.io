@@ -250,8 +250,12 @@ footer .fline{margin-top:6px}
 .phone-full{display:none}
 .phone-on .phone-mask{display:none}
 .phone-on .phone-full{display:inline}
-.phone-toggle{margin-left:8px;flex:none;border:1px solid rgba(125,180,255,.65);background:rgba(125,180,255,.14);color:#d6e8ff;font-family:inherit;font-size:11px;line-height:1;padding:3px 8px;border-radius:10px;cursor:pointer;transition:background .2s,color .2s}
-.phone-toggle:hover{background:rgba(125,180,255,.3);color:#fff}
+.phone-toggle{margin-left:8px;flex:none;flex:none;display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;padding:0;border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.08);color:#e2eafa;border-radius:50%;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.phone-toggle svg{width:15px;height:15px;display:block;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.phone-toggle .ico-eye{display:none}
+.phone-on .phone-toggle .ico-eye{display:block}
+.phone-on .phone-toggle .ico-eye-off{display:none}
+.phone-toggle:hover{background:rgba(125,180,255,.18);color:#7db4ff;border-color:rgba(125,180,255,.7)}
 .phone-toggle:focus-visible{outline:2px solid #7db4ff;outline-offset:2px}
 @media print{
   @page{size:A4;margin:10mm 12mm}
@@ -334,7 +338,7 @@ footer .fline{margin-top:6px}
     <div class="contact-grid">
       <div class="contact-item">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span><b>Phone</b><span class="phone-mask">188****6623</span><span class="phone-full">18823066623</span></span><button class="phone-toggle" type="button" aria-label="Show full phone number" aria-pressed="false">Show</button>
+        <span><b>Phone</b><span class="phone-mask">188****6623</span><span class="phone-full">18823066623</span></span><button class="phone-toggle" type="button" aria-pressed="false" aria-label="Show full phone number" title="Show full phone number"><svg class="ico-eye" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><svg class="ico-eye-off" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg></button>
       </div>
       <div class="contact-item">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
@@ -713,7 +717,7 @@ footer .fline{margin-top:6px}
 </script>
 
 <script>
-(function(){var b=document.querySelector(".phone-toggle");if(!b)return;var bd=document.body;function set(on){bd.classList.toggle("phone-on",on);b.setAttribute("aria-pressed",on?"true":"false");b.setAttribute("aria-label",(on?"Hide":"Show")+"full phone number");b.textContent=on?"Hide":"Show";}b.addEventListener("click",function(){set(!bd.classList.contains("phone-on"));});})();
+(function(){var b=document.querySelector(".phone-toggle");if(!b)return;var bd=document.body;function set(on){bd.classList.toggle("phone-on",on);b.setAttribute("aria-pressed",on?"true":"false");b.setAttribute("aria-label",(on?"Hide":"Show")+"full phone number");b.setAttribute("title",(on?"Hide":"Show")+" full phone number");}b.addEventListener("click",function(){set(!bd.classList.contains("phone-on"));});})();
 </script>
 </body>
 </html>
