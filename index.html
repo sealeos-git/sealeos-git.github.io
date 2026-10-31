@@ -234,10 +234,20 @@ footer .fline{margin-top:6px}
   .contact-grid{grid-template-columns:1fr}
   .proj-card,.tl-card,.strength-card,.edu-card,.train-card{padding:18px}
   .hero h1{font-size:28px;letter-spacing:2px}
-  .nav-icons{display:none}
+  .nav-icon{width:34px;height:34px}
+  .nav-icon svg{width:17px;height:17px}
 }
 
 /* ---------- 打印 ---------- */
+@media (max-width:560px){
+  .topnav-inner{height:auto;min-height:52px;flex-wrap:wrap;padding:8px 12px;gap:6px}
+  .brand{flex:1 1 100%;margin-right:0;font-size:14px;letter-spacing:.5px}
+  .btn-lang,.btn-print{font-size:12.5px;padding:5px 12px}
+  .nav-icons{margin-left:auto;gap:0}
+  .hero .role{font-size:14px;letter-spacing:1px;padding:4px 12px}
+  .available{font-size:12.5px;padding:5px 12px}
+  .proj-body li,.edu-body p,.train-list li,.strength-card p,.tl-card p,footer .fline{overflow-wrap:break-word}
+}
 @media print{
   @page{size:A4;margin:14mm 13mm}
   body{background:#fff;font-size:11.5px;line-height:1.55}
